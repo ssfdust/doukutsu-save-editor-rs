@@ -4,8 +4,6 @@ name: Build Canary Version
 
 on:
   push:
-    tags:
-      - v*
 
 jobs:
   release:
@@ -18,7 +16,7 @@ jobs:
         
           - platform: linux_glibc-x86_64
             target: x86_64-unknown-linux-gnu
-            os: ubuntu-latest
+            os: ubuntu-22.04
             bin: doukutsu-save-editor
             
           - platform: windows-x86_64
